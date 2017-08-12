@@ -1,32 +1,20 @@
-# Prerequisites
+# Eclipse files
+.settings/
+.metadata/
+
+RemoteSystemsTempFiles/
+
+# Compiled files
+*.elf
+*.hex
+*.map
+*.mk
 *.d
-
-# Compiled Object files
-*.slo
-*.lo
 *.o
-*.obj
 
-# Precompiled Headers
-*.gch
-*.pch
+# Generated files
+*/Debug/makefile
+*/Release/makefile
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# Additional directories
+Tools/
