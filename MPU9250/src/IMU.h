@@ -3,7 +3,7 @@
 
 extern "C"
 {
-    #include "stm32f1xx.h"
+    #include "stm32f4xx.h"
 }
 
 class IMU

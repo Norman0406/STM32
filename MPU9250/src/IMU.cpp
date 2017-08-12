@@ -2,7 +2,7 @@
 
 extern "C"
 {
-    #include "stm32f1xx_hal.h"
+    #include "stm32f4xx_hal.h"
     #include "inv_mpu.h"
     #include "inv_mpu_dmp_motion_driver.h"
     #include "invensense.h"
