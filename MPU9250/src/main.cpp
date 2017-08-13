@@ -6,7 +6,12 @@ System system;
 
 int main(void)
 {
-    system.run();
+    return system.run();
+}
+
+void errorMessage(char* file, int line, char* message)
+{
+    system.errorHandler(file, line, message);
 }
 
 void ErrorHandler(char* file, int line)

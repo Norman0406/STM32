@@ -2,6 +2,7 @@
 
 extern "C"
 {
+    #include <diag/trace.h>
     #include <stm32f4xx_hal.h>
 }
 
@@ -112,16 +113,23 @@ void System::initI2C()
     }
 }
 
-void System::run()
+int System::run()
 {
     osThreadDef(defaultTask, &System::mainThreadStatic, osPriorityNormal, 0, 128);
     m_defaultTaskHandle = osThreadCreate(osThread(defaultTask), this);
 
     osKernelStart();
+    return 0;
 }
 
 void System::errorHandler(char* file, int line)
 {
+    errorHandler(file, line, "Undefined error");
+}
+
+void System::errorHandler(char* file, int line, char* message)
+{
+    trace_printf("%s(%d): %s", file, line, message);
 }
 
 void System::mainThreadStatic(const void* argument)

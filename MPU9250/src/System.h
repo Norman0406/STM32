@@ -12,8 +12,9 @@ class System {
 public:
     System();
 
-    void run();
+    int run();
     void errorHandler(char* file, int line);
+    void errorHandler(char* file, int line, char* message);
 
 private:
     void initSystemClock();
