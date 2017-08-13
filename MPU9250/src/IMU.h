@@ -12,9 +12,8 @@ public:
 	IMU();
 	~IMU() = default;
 
-
-private:
     void init();
+	void process();
 };
 
 #endif // IMU_H
